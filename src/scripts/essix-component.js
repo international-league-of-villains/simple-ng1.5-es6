@@ -1,8 +1,7 @@
 export let EssixComponent = {
   bindings : {
     listItems: '=',
-    selection: '=',
-    title: '@'
+    selection: '='
   },
   controller: class MyController {
     constructor () {
