@@ -1,5 +1,8 @@
 $font-dir:    "../assets/fonts";
+// forms (inputs & labels)
+@import "modules/forms";
 
+$text-color: #5e514d;
 
 @mixin font-face (
   $font-family, 

@@ -1,7 +1,8 @@
 export let EssixComponent = {
   bindings : {
-    listItems: '=',
-    selection: '='
+    powerVerbs: '=',
+    powerSubjects: '=',
+    callback: '='
   },
   controller: class MyController {
     constructor () {
@@ -9,15 +10,20 @@ export let EssixComponent = {
     }
     onSelect () {
       console.log('selection happened', this.selection);
-      //this.selection = JSON.parse(this.selection);
+      if (this.powerVerb && this.powerSubject) {
+        this.callback(this.powerVerb, this.powerSubject);
+      }
     }
   },
   template: `<article>
-              <h4>ES6 Select Component</h4>
-              <select ng-model="$ctrl.selection" ng-change="$ctrl.onSelect()" data-ng-options="item as item.name for item in $ctrl.listItems">
+              <h4>Select Power (ES6)</h4>
+              <select ng-model="$ctrl.powerVerb" ng-change="$ctrl.onSelect()" data-ng-options="item as item.name for item in $ctrl.powerVerbs">
                 <option value="">Pick one...</option>
               </select>
-              <span ng-if="$ctrl.selection"> You selected: {{$ctrl.selection.name}}</span>
+              <select ng-model="$ctrl.powerSubject" ng-change="$ctrl.onSelect()" data-ng-options="item as item.name for item in $ctrl.powerSubjects">
+                <option value="">Pick one...</option>
+              </select>
+              <span ng-if="$ctrl.powerVerb &&  $ctrl.powerSubject"> You selected selected the power: {{$ctrl.powerVerb.name}} {{$ctrl.powerSubject.name}}</span>
             </article>`
 
 }
