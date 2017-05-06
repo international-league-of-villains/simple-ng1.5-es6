@@ -13,7 +13,7 @@ const plugins = [
 
 let entries = [
   'webpack-dev-server/client?http://localhost:8080',
-  './src/scripts/app.js',
+  './src/js/app.js',
 ];
 
 if (process.env.NODE_ENV === 'production') {
