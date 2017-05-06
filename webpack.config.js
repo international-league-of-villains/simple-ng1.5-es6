@@ -35,6 +35,14 @@ module.exports = {
         test: [/\.scss$/i, /\.css$/],
         loader: extractCSS.extract('style-loader', 'css?-minimize!postcss!sass'),
       },
+      { 
+        test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,
+        loader: "file-loader",
+        query: {
+          name: '[path][name].[ext]',
+          context: './src',
+        },
+      },
       {
         test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/,
         loader: 'file-loader',

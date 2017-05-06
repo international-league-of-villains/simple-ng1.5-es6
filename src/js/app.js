@@ -7,6 +7,7 @@ import '../styles/app.scss';
 /*
 require("file-loader?name=assets/images/[name].[ext]!../assets/images/my_image_name.svg");
 */
+require("file-loader?name=assets/images/[name].[ext]!../assets/images/spiderman-villains.jpg");
 
 import angular from 'angular';
 import 'angular-animate';
