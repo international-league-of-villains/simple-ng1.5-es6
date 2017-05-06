@@ -42,14 +42,14 @@
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__(1);
 
 
-/***/ }),
+/***/ },
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
 
@@ -87,26 +87,26 @@
 
 	_angular2.default.bootstrap(document, ['newerNG1']);
 
-/***/ }),
+/***/ },
 /* 2 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
 
-/***/ }),
+/***/ },
 /* 3 */,
 /* 4 */,
 /* 5 */,
 /* 6 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(7);
 	module.exports = angular;
 
 
-/***/ }),
+/***/ },
 /* 7 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/**
 	 * @license AngularJS v1.5.7
@@ -31582,17 +31582,17 @@
 
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
-/***/ }),
+/***/ },
 /* 8 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(9);
 	module.exports = 'ngAnimate';
 
 
-/***/ }),
+/***/ },
 /* 9 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/**
 	 * @license AngularJS v1.5.7
@@ -35742,21 +35742,21 @@
 	})(window, window.angular);
 
 
-/***/ }),
+/***/ },
 /* 10 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	__webpack_require__(11);
 	module.exports = 'ngAria';
 
 
-/***/ }),
+/***/ },
 /* 11 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/**
-	 * @license AngularJS v1.6.4
-	 * (c) 2010-2017 Google, Inc. http://angularjs.org
+	 * @license AngularJS v1.5.7
+	 * (c) 2010-2016 Google, Inc. http://angularjs.org
 	 * License: MIT
 	 */
 	(function(window, angular) {'use strict';
@@ -35782,19 +35782,19 @@
 	 *
 	 * Below is a more detailed breakdown of the attributes handled by ngAria:
 	 *
-	 * | Directive                                   | Supported Attributes                                                                                |
-	 * |---------------------------------------------|-----------------------------------------------------------------------------------------------------|
+	 * | Directive                                   | Supported Attributes                                                                   |
+	 * |---------------------------------------------|----------------------------------------------------------------------------------------|
 	 * | {@link ng.directive:ngModel ngModel}        | aria-checked, aria-valuemin, aria-valuemax, aria-valuenow, aria-invalid, aria-required, input roles |
-	 * | {@link ng.directive:ngDisabled ngDisabled}  | aria-disabled                                                                                       |
-	 * | {@link ng.directive:ngRequired ngRequired}  | aria-required                                                                                       |
-	 * | {@link ng.directive:ngChecked ngChecked}    | aria-checked                                                                                        |
-	 * | {@link ng.directive:ngReadonly ngReadonly}  | aria-readonly                                                                                       |
-	 * | {@link ng.directive:ngValue ngValue}        | aria-checked                                                                                        |
-	 * | {@link ng.directive:ngShow ngShow}          | aria-hidden                                                                                         |
-	 * | {@link ng.directive:ngHide ngHide}          | aria-hidden                                                                                         |
-	 * | {@link ng.directive:ngDblclick ngDblclick}  | tabindex                                                                                            |
-	 * | {@link module:ngMessages ngMessages}        | aria-live                                                                                           |
-	 * | {@link ng.directive:ngClick ngClick}        | tabindex, keydown event, button role                                                                |
+	 * | {@link ng.directive:ngDisabled ngDisabled}  | aria-disabled                                                                          |
+	 * | {@link ng.directive:ngRequired ngRequired}  | aria-required
+	 * | {@link ng.directive:ngChecked ngChecked}    | aria-checked
+	 * | {@link ng.directive:ngReadonly ngReadonly}  | aria-readonly                                                                          |
+	 * | {@link ng.directive:ngValue ngValue}        | aria-checked                                                                           |
+	 * | {@link ng.directive:ngShow ngShow}          | aria-hidden                                                                            |
+	 * | {@link ng.directive:ngHide ngHide}          | aria-hidden                                                                            |
+	 * | {@link ng.directive:ngDblclick ngDblclick}  | tabindex                                                                               |
+	 * | {@link module:ngMessages ngMessages}        | aria-live                                                                              |
+	 * | {@link ng.directive:ngClick ngClick}        | tabindex, keypress event, button role                                                  |
 	 *
 	 * Find out more information about each directive by reading the
 	 * {@link guide/accessibility ngAria Developer Guide}.
@@ -35814,8 +35814,8 @@
 	 * {@link ngAria.$ariaProvider#config config} method. For more details, see the
 	 * {@link guide/accessibility Developer Guide}.
 	 */
+	 /* global -ngAriaModule */
 	var ngAriaModule = angular.module('ngAria', ['ng']).
-	                        info({ angularVersion: '1.6.4' }).
 	                        provider('$aria', $AriaProvider);
 
 	/**
@@ -35831,7 +35831,6 @@
 	/**
 	 * @ngdoc provider
 	 * @name $ariaProvider
-	 * @this
 	 *
 	 * @description
 	 *
@@ -35860,7 +35859,7 @@
 	    ariaInvalid: true,
 	    ariaValue: true,
 	    tabindex: true,
-	    bindKeydown: true,
+	    bindKeypress: true,
 	    bindRoleForClick: true
 	  };
 
@@ -35876,15 +35875,12 @@
 	   *  - **ariaDisabled** – `{boolean}` – Enables/disables aria-disabled tags
 	   *  - **ariaRequired** – `{boolean}` – Enables/disables aria-required tags
 	   *  - **ariaInvalid** – `{boolean}` – Enables/disables aria-invalid tags
-	   *  - **ariaValue** – `{boolean}` – Enables/disables aria-valuemin, aria-valuemax and
-	   *    aria-valuenow tags
+	   *  - **ariaValue** – `{boolean}` – Enables/disables aria-valuemin, aria-valuemax and aria-valuenow tags
 	   *  - **tabindex** – `{boolean}` – Enables/disables tabindex tags
-	   *  - **bindKeydown** – `{boolean}` – Enables/disables keyboard event binding on non-interactive
-	   *    elements (such as `div` or `li`) using ng-click, making them more accessible to users of
-	   *    assistive technologies
-	   *  - **bindRoleForClick** – `{boolean}` – Adds role=button to non-interactive elements (such as
-	   *    `div` or `li`) using ng-click, making them more accessible to users of assistive
-	   *    technologies
+	   *  - **bindKeypress** – `{boolean}` – Enables/disables keypress event binding on `div` and
+	   *    `li` elements with ng-click
+	   *  - **bindRoleForClick** – `{boolean}` – Adds role=button to non-interactive elements like `div`
+	   *    using ng-click, making them more accessible to users of assistive technologies
 	   *
 	   * @description
 	   * Enables/disables various ARIA attributes
@@ -35993,8 +35989,8 @@
 	  function shouldAttachRole(role, elem) {
 	    // if element does not have role attribute
 	    // AND element type is equal to role (if custom element has a type equaling shape) <-- remove?
-	    // AND element is not in nodeBlackList
-	    return !elem.attr('role') && (elem.attr('type') === role) && !isNodeOneOf(elem, nodeBlackList);
+	    // AND element is not INPUT
+	    return !elem.attr('role') && (elem.attr('type') === role) && (elem[0].nodeName !== 'INPUT');
 	  }
 
 	  function getShape(attr, elem) {
@@ -36014,6 +36010,14 @@
 	      var shape = getShape(attr, elem);
 
 	      return {
+	        pre: function(scope, elem, attr, ngModel) {
+	          if (shape === 'checkbox') {
+	            //Use the input[checkbox] $isEmpty implementation for elements with checkbox roles
+	            ngModel.$isEmpty = function(value) {
+	              return value === false;
+	            };
+	          }
+	        },
 	        post: function(scope, elem, attr, ngModel) {
 	          var needsTabIndex = shouldAttachAttr('tabindex', 'tabindex', elem, false);
 
@@ -36022,8 +36026,6 @@
 	          }
 
 	          function getRadioReaction(newVal) {
-	            // Strict comparison would cause a BC
-	            // eslint-disable-next-line eqeqeq
 	            var boolVal = (attr.value == ngModel.$viewValue);
 	            elem.attr('aria-checked', boolVal);
 	          }
@@ -36117,7 +36119,7 @@
 	  return {
 	    restrict: 'A',
 	    compile: function(elem, attr) {
-	      var fn = $parse(attr.ngClick);
+	      var fn = $parse(attr.ngClick, /* interceptorFn */ null, /* expensiveChecks */ true);
 	      return function(scope, elem, attr) {
 
 	        if (!isNodeOneOf(elem, nodeBlackList)) {
@@ -36130,8 +36132,8 @@
 	            elem.attr('tabindex', 0);
 	          }
 
-	          if ($aria.config('bindKeydown') && !attr.ngKeydown && !attr.ngKeypress && !attr.ngKeyup) {
-	            elem.on('keydown', function(event) {
+	          if ($aria.config('bindKeypress') && !attr.ngKeypress) {
+	            elem.on('keypress', function(event) {
 	              var keyCode = event.which || event.keyCode;
 	              if (keyCode === 32 || keyCode === 13) {
 	                scope.$apply(callback);
@@ -36159,9 +36161,9 @@
 	})(window, window.angular);
 
 
-/***/ }),
+/***/ },
 /* 12 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	// Should already be required, here for clarity
 	__webpack_require__(6);
@@ -36177,9 +36179,9 @@
 	module.exports = 'ngMaterial';
 
 
-/***/ }),
+/***/ },
 /* 13 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	/*!
 	 * AngularJS Material Design
@@ -72187,9 +72189,9 @@
 
 	})(window, window.angular);;window.ngMaterial={version:{full: "1.1.4"}};
 
-/***/ }),
+/***/ },
 /* 14 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	'use strict';
 
@@ -72231,9 +72233,9 @@
 	  template: '<article>\n              <h4>Select Origin Story (ES6)</h4>\n              <div layout="column">\n                <md-input-container>\n                  <md-select ng-model="$ctrl.selectedWhat" placeholder="What happen to you">\n                    <md-option ng-value="what" ng-repeat="what in $ctrl.what">{{::what.text }}</md-option>\n                  </md-select>\n                </md-input-container>\n              </div>\n              <div layout="column">\n                <md-input-container>\n                  <md-select ng-model="$ctrl.selectedWho" placeholder="Who did this to you">\n                    <md-option ng-value="who" ng-repeat="who in $ctrl.who">{{::who.text }}</md-option>\n                  </md-select>\n                </md-input-container>\n                </div>\n              <div layout="column">\n                <md-input-container>\n                  <md-select ng-model="$ctrl.selectedWhere" placeholder="Where did this happen">\n                    <md-option ng-value="where" ng-repeat="where in $ctrl.where">{{::where.text }}</md-option>\n                  </md-select>\n                </md-input-container>\n              </div>\n            </article>'
 	};
 
-/***/ }),
+/***/ },
 /* 15 */
-/***/ (function(module, exports) {
+/***/ function(module, exports) {
 
 	'use strict';
 
@@ -72256,11 +72258,11 @@
 	  template: '<h3>ES6 Wrapping Component</h3>\n  <essix-component what="$ctrl.what" who="$ctrl.who" where="$ctrl.where"callback="$ctrl.callback">\n  </essix-component>'
 	};
 
-/***/ }),
+/***/ },
 /* 16 */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ function(module, exports, __webpack_require__) {
 
 	module.exports = __webpack_require__.p + "assets/images/spiderman-villains.jpg";
 
-/***/ })
+/***/ }
 /******/ ]);
