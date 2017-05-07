@@ -33,7 +33,7 @@ module.exports = {
       },
       {
         test: [/\.scss$/i, /\.css$/],
-        loader: extractCSS.extract('style-loader', 'css?-minimize!postcss!sass'),
+        loader: extractCSS.extract('style-loader', 'css?-minimize!postcss!sass', {publicPath: '../'}),
       },
       { 
         test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/,

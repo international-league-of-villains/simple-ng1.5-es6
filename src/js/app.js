@@ -1,5 +1,5 @@
 import '../styles/app.scss';
-
+//import '../assets/images/spiderman-villains.jpg';
 /**
  * example of image import
  * just replace my_image_name with the name of your image
@@ -7,7 +7,7 @@ import '../styles/app.scss';
 /*
 require("file-loader?name=assets/images/[name].[ext]!../assets/images/my_image_name.svg");
 */
-require("file-loader?name=assets/images/[name].[ext]!../assets/images/spiderman-villains.jpg");
+//require("file-loader?name=../assets/images/[name].[ext]!../assets/images/spiderman-villains.jpg");
 
 import angular from 'angular';
 import 'angular-animate';
