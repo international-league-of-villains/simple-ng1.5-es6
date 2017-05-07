@@ -55,22 +55,23 @@
 
 	__webpack_require__(2);
 
-	var _angular = __webpack_require__(6);
+	var _angular = __webpack_require__(7);
 
 	var _angular2 = _interopRequireDefault(_angular);
 
-	__webpack_require__(8);
+	__webpack_require__(9);
 
-	__webpack_require__(10);
+	__webpack_require__(11);
 
-	__webpack_require__(12);
+	__webpack_require__(13);
 
-	var _essixComponent = __webpack_require__(14);
+	var _essixComponent = __webpack_require__(15);
 
-	var _wrapperComponent = __webpack_require__(15);
+	var _wrapperComponent = __webpack_require__(16);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	//import '../assets/images/spiderman-villains.jpg';
 	/**
 	 * example of image import
 	 * just replace my_image_name with the name of your image
@@ -78,7 +79,7 @@
 	/*
 	require("file-loader?name=assets/images/[name].[ext]!../assets/images/my_image_name.svg");
 	*/
-	__webpack_require__(16);
+	//require("file-loader?name=../assets/images/[name].[ext]!../assets/images/spiderman-villains.jpg");
 
 	_angular2.default.module('newerNG1', ['ngMaterial']);
 	_angular2.default.module('newerNG1').run(function () {
@@ -97,15 +98,16 @@
 /* 3 */,
 /* 4 */,
 /* 5 */,
-/* 6 */
+/* 6 */,
+/* 7 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(7);
+	__webpack_require__(8);
 	module.exports = angular;
 
 
 /***/ },
-/* 7 */
+/* 8 */
 /***/ function(module, exports) {
 
 	/**
@@ -31583,15 +31585,15 @@
 	!window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ },
-/* 8 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(9);
+	__webpack_require__(10);
 	module.exports = 'ngAnimate';
 
 
 /***/ },
-/* 9 */
+/* 10 */
 /***/ function(module, exports) {
 
 	/**
@@ -35743,15 +35745,15 @@
 
 
 /***/ },
-/* 10 */
+/* 11 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(11);
+	__webpack_require__(12);
 	module.exports = 'ngAria';
 
 
 /***/ },
-/* 11 */
+/* 12 */
 /***/ function(module, exports) {
 
 	/**
@@ -36162,25 +36164,25 @@
 
 
 /***/ },
-/* 12 */
+/* 13 */
 /***/ function(module, exports, __webpack_require__) {
 
 	// Should already be required, here for clarity
-	__webpack_require__(6);
+	__webpack_require__(7);
 
 	// Load Angular and dependent libs
-	__webpack_require__(8);
-	__webpack_require__(10);
+	__webpack_require__(9);
+	__webpack_require__(11);
 
 	// Now load Angular Material
-	__webpack_require__(13);
+	__webpack_require__(14);
 
 	// Export namespace
 	module.exports = 'ngMaterial';
 
 
 /***/ },
-/* 13 */
+/* 14 */
 /***/ function(module, exports) {
 
 	/*!
@@ -72190,7 +72192,7 @@
 	})(window, window.angular);;window.ngMaterial={version:{full: "1.1.4"}};
 
 /***/ },
-/* 14 */
+/* 15 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -72234,7 +72236,7 @@
 	};
 
 /***/ },
-/* 15 */
+/* 16 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -72257,12 +72259,6 @@
 	  },
 	  template: '<h3>ES6 Wrapping Component</h3>\n  <essix-component what="$ctrl.what" who="$ctrl.who" where="$ctrl.where"callback="$ctrl.callback">\n  </essix-component>'
 	};
-
-/***/ },
-/* 16 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = __webpack_require__.p + "assets/images/spiderman-villains.jpg";
 
 /***/ }
 /******/ ]);
