@@ -1,5 +1,5 @@
 {
-  "name": "simple-ng1.5-es5",
+  "name": "simple-ng1.5-es6",
   "version": "0.0.1",
   "description": "A very tiny seed project using webpack",
   "main": "index.js",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amindunited/simple-ng1.5-es5.git"
+    "url": "git+https://github.com/amindunited/simple-ng1.5-es6.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/amindunited/simple-ng1.5-es5/issues"
+    "url": "https://github.com/amindunited/simple-ng1.5-es6/issues"
   },
-  "homepage": "https://github.com/amindunited/simple-ng1.5-es5#readme",
+  "homepage": "https://github.com/amindunited/simple-ng1.5-es6#readme",
   "devDependencies": {
     "angular": "1.5.7",
     "angular-animate": "1.5.7",
